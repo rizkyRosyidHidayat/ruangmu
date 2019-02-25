@@ -1,26 +1,25 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
+import Beranda from './Beranda/Beranda.js';
+import Mitra from './Mitra/Mitra.js';
+import DetailRuang from './Detail/DetailRuang.js';
+import Akun from './Akun/Akun.js';
+import Pencarian from './Pencarian/Pencarian.js';
+import './bootstrap.min.css';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Beranda} />
+          <Route path="/Mitra" component={Mitra} />
+          <Route path="/Detail" component={DetailRuang} />
+          <Route path="/Akun" component={Akun} />
+          <Route path="/Pencarian" component={Pencarian} />
+        </Switch>
+      </Router>
     );
   }
 }
