@@ -2,8 +2,10 @@
   "name": "react-form",
   "version": "0.1.0",
   "private": true,
+  "homepage": " https://rizkyrosyidhidayat.github.io/ruangmu",
   "dependencies": {
     "antd": "^3.13.5",
+    "gh-pages": "^2.0.1",
     "google-map-react": "^1.1.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -11,6 +13,8 @@
     "react-scripts": "2.1.5"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
